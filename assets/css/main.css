@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url("font.css");
 
@@ -181,9 +180,13 @@ html.fp-enabled,
 			#section2:before{
 				height: 35rem;
 			}
-			#section1:after,
+
+			#section1:after {
+				height: 30rem;
+			}
+			
 			#section2:after{
-				height: 23rem;
+				height: 25rem;
 			}
 		}
 	#footer {
@@ -450,7 +453,7 @@ html.fp-enabled,
 			}
 			
 			.holder.big.right {
-				padding: 23rem 0 0 0;
+				padding: 20rem 0 0 0;
 				display: table;
 				margin: auto;
 			}
