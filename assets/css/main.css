@@ -116,12 +116,6 @@
 				-moz-transform: rotate(7deg);
 				transform: rotate(7deg);
 			}
-			#footer {
-				background: #000000 !important;
-				perspective: 340px;
-				height: 100%;
-				overflow: hidden;
-			}
 			/*responsive*/
 			@media screen and (max-width: 767px) {
 			#section1:before{
