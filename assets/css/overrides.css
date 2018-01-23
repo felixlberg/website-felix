@@ -37,6 +37,7 @@ html.fp-enabled,
 /* Bootstrap */
 .container.zero{
     margin-top: 10em;
+    z-index: 199;
 }
 .container.one,
 .container.two {
@@ -46,6 +47,13 @@ html.fp-enabled,
 }
 .container.three {
     margin-top: 6em;
+}
+/* Sections Space Background */
+#section0{
+    background: #000000 !important;
+}
+#footer {
+    background: #000000 !important;
 }
 /* Navigation */	
 .line {
