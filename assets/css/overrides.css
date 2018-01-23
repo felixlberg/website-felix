@@ -1,0 +1,84 @@
+/* Fullpage */
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+
+    /* Touch detection for Windows 8 */
+    -ms-touch-action: none;
+
+    /* IE 11 on Windows Phone 8.1*/
+    touch-action: none;
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{
+    height: auto !important;
+}
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
+/* Bootstrap */
+.container.zero{
+    margin-top: 10em;
+}
+.container.one,
+.container.two {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.container.three {
+    margin-top: 6em;
+}
+/* Navigation */	
+#nav li {
+    letter-spacing: 0.2em;
+    font-family: 'Luckiest Guy', cursive;
+}   
+    #nav li:hover {
+        background: #ce1d1d;
+    }
+#nav a {
+    color: #fff;
+    text-decoration: none;
+}
+    #nav li:hover a {
+        color: #222;
+    }
+    .row {
+        vertical-align: middle
+    }
+/*Animations*/
+@keyframes bounceOut {
+    0% {box-shadow: 0 0 0 4px #222;opacity: 1;}
+    25% {box-shadow: 0 0 0 1px rgb(78, 71, 71);opacity: 1;}
+    50% {box-shadow: 0 0 0 7px rgb(85, 46, 46);opacity: 1;}
+    75% {box-shadow: 0 0 0 4px #633;opacity: 1;}
+    100% {box-shadow: 0 0 0 5px rgb(85, 27, 26);opacity: 1;}
+}
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+  0% {opacity: 0;transform: scale3d(.3, .3, .3);}
+  20% {transform: scale3d(1.1, 1.1, 1.1);}
+  40% {transform: scale3d(.9, .9, .9);}
+  60% {opacity: 1;transform: scale3d(1.03, 1.03, 1.03);}
+  80% {transform: scale3d(.97, .97, .97);}
+  to {opacity: 1;transform: scale3d(1, 1, 1);}
+}

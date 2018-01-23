@@ -33,7 +33,7 @@ $(document).ready(function() {
         resetSliders: false,
         fadingEffect: false,
         normalScrollElements: '.container.three',
-        scrollOverflow: true,
+        scrollOverflow: false,
         scrollOverflowReset: false,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
@@ -74,32 +74,40 @@ $(document).ready(function() {
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		/* Sections Animations */
 		onLeave: function(index, nextIndex, direction){
-		
+			/* Section 0 fallback */
+			if (index == 2 && direction =='up') {
+				$isAnimatedSec0.eq(0).removeClass('animated fadeOut').addClass('animated bounceInUp').css('animation-delay', '1s');
+			}
 			/* Section1 Animations  */
-			if( index == 1 && nextIndex == 2 ){ 
-				$isAnimatedSec0.eq(0).addClass('animated fadeOut').css('animation-delay', '.2s');
+			else if ( index == 1 && nextIndex == 2 ){ 
+				$isAnimatedSec0.eq(0).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
 				
 				$isAnimatedSec1.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s'); 
 				$isAnimatedSec1.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
 				$isAnimatedSec1.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s'); 
 			}
-			
+			/* Section 1 fallback */
+			if (index == 3 && direction =='up') {
+				$isAnimatedSec1.eq(2).removeClass('animated fadeOut').addClass('animated bounceInUp').css('animation-delay', '1s');
+			}
 			/* Section2 Animations */
 			else if( ( index == 3 || index == 2 ) && nextIndex == 3 ) {
-				$isAnimatedSec1.eq(2).addClass('animated fadeOut').css('animation-delay', '.2s');
+				$isAnimatedSec1.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
 
 				$isAnimatedSec2.eq(0).addClass('animated fadeIn').css('animation-delay', '.5s');
 				$isAnimatedSec2.eq(1).addClass('animated fadeInRight').css('animation-delay', '.2s');
 				$isAnimatedSec2.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s'); 
 			}
-
 			/* Section3 Animations */
 			else if (index == 3 && direction =='down') {
-				$isAnimatedSec2.eq(2).addClass('animated fadeOut').css('animation-delay', '.2s');
+				$isAnimatedSec2.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
+			}
+			/* Section 3 fallback */
+			if (index == 4 && direction =='up') {
+				$isAnimatedSec2.eq(2).removeClass('animated fadeOut').addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
 		}
    });
-	
 	//Nav
 	// selected elements
 	var navTrigger = document.getElementById('nav-trigger');
@@ -152,12 +160,9 @@ $(document).ready(function() {
 			},0);
 		});
 
-
-
 	$('.txt').html(function(i, html) {
 	  var chars = $.trim(html).split("");
 
 	  return '<span>' + chars.join('</span><span>') + '</span>';
 	});
-
 });
