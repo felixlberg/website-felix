@@ -115,10 +115,13 @@
 				-moz-transform: rotate(7deg);
 				transform: rotate(7deg);
 			}
+			/*responsive*/
 			@media screen and (max-width: 767px) {
-			#section1:before,
+			#section1:before{
+				height: 15rem;
+			}
 			#section2:before{
-				height: 35rem;
+				height: 20rem;
 			}
 			#section1:after {
 				height: 30rem;
@@ -174,7 +177,7 @@
 				position: absolute; 
 			}
 			.title:after {
-				text-shadow:  0px 0px 6px rgba(255, 255, 255, 0.5);
+				text-shadow:  0px 0px 8px rgba(92, 4, 2, 1);
 				color: transparent;
 			}
 			.shadow:after {
@@ -204,6 +207,8 @@
 			font-family: 'Luckiest Guy', cursive;
 			font-size: 44px;
 			letter-spacing: 2px;
+			color: #5C0402;
+			text-shadow:  0px 0px 3px rgba(92, 4, 2, 1);
 		}
 		.textbox h3 {
 			font-family: 'Luckiest Guy', cursive;
@@ -225,9 +230,11 @@
 				top: 50px;
 				text-align: center;
 				margin-top: 0;
+				padding: 0 15px 0 0;
 			}
 				.textbox h2 {
 					font-size: 30px;
+					padding: 0 0 0 7px;
 					text-align: left;
 				}
 				.textbox h3 {
@@ -281,18 +288,18 @@
 				margin: auto;
 			}
 			.holder.big img.user {
-				height: 28rem;
-				width: 28rem;	
+				height: 26rem;
+				width: 26rem;	
 			}
 		}
 		@media screen and (max-width: 420px) {		
 			.holder.big.left{
-				padding: 23rem 0 0 0;
+				padding: 21rem 0 0 0;
 				display: table;
 				margin: auto;
 			}
 			.holder.big.right {
-				padding: 20rem 0 0 0;
+				padding: 21rem 0 0 0;
 				display: table;
 				margin: auto;
 			}
@@ -301,7 +308,7 @@
 				width: 20rem;	
 			}
 		}
-		@media screen and (max-width: 340px) {	
+		@media screen and (max-width: 380px) {	
 			.holder.big img.user {
 				height: 16rem;
 				width: 16rem;	
@@ -368,7 +375,7 @@
 			position: relative;
 			bottom: -1em;
 			text-align: center;
-			color: rgb(255, 255, 255);
+			color: #5C0402;
 			font-family: 'Luckiest Guy', cursive;
 			font-size: 18px;
 			opacity: 0;

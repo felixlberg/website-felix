@@ -48,15 +48,18 @@ html.fp-enabled,
     margin-top: 6em;
 }
 /* Navigation */	
+.line {
+    background: #decfbc;
+}
 #nav li {
     letter-spacing: 0.2em;
     font-family: 'Luckiest Guy', cursive;
 }   
     #nav li:hover {
-        background: #ce1d1d;
+        background: #5C0402;
     }
 #nav a {
-    color: #fff;
+    color: #decfbc;
     text-decoration: none;
 }
     #nav li:hover a {
