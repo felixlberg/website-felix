@@ -125,10 +125,10 @@
 				height: 20rem;
 			}
 			#section1:after {
-				height: 30rem;
+				height: 25rem;
 			}
 			#section2:after{
-				height: 25rem;
+				height: 20rem;
 			}
 		}
 	#footer {
@@ -243,7 +243,6 @@
 			}
 				.textbox h2 {
 					font-size: 30px;
-					padding: 0 0 0 7px;
 					text-align: left;
 				}
 				.textbox h3 {
@@ -254,11 +253,6 @@
 					color: #decfbc;
 				}
 		}
-		@media screen and (max-width: 420px) {	
-			.textbox {
-				top: 1rem;
-			}
-		}	
 	/* Round Avatar */
 	.holder.big {
 		height: 30rem;
@@ -320,8 +314,8 @@
 		}
 		@media screen and (max-width: 380px) {	
 			.holder.big img.user {
-				height: 16rem;
-				width: 16rem;	
+				height: 18rem;
+				width: 18rem;	
 			}
 		}
 	.holder.big .avatar1 img.user {
@@ -347,33 +341,32 @@
 	/* Small Avatar */
 	.avatars{
 		text-align: center;
-		margin: 8em 4.5em 0 4.5em;
 	}
 	.holder {
-		width: 10em;
-		margin:0 8rem;
+		width: 10rem;
+		margin: 0 20rem 2rem 20rem;
 		display: inline-block;
 	}
-	@media screen and (max-width: 1300px) {	
-		.holder {margin:0 3rem;}
-		.holder .avatar img.user {width: 12rem;}
-	}
-	@media screen and (max-width: 1000px) {	
-		.holder {margin:0 2rem;}
-	}
-	@media screen and (max-width: 867px) {	
-		.avatars{text-align: center; margin: 8em 2rem 0 2rem;}
 
-
-		.holder .avatar img.user {width: 9rem;}
+	@media screen and (max-width: 1250px) {	
+		.holder {
+			width: 10rem;
+			margin: 0 10rem 2rem 10rem;
+		}
 	}
-	@media screen and (max-width: 700px) {	
-		.holder {width: 8rem;}
-
-		.holder .avatar img.user {width: 8rem;}
+	@media screen and (max-width: 650px) {	
+		.holder {
+			width: 8rem;
+			margin: 0 6rem 2rem 6rem;
+		}
+	}
+	@media screen and (max-width: 450px) {	
+		.holder {
+			width: 6rem;
+			margin: 0 3rem 2rem 3rem;
+		}
 	}
 		.holder .avatar {
-		  margin: 25px auto;
 		}
 		.holder .avatar img.user {
 			background-color: #5C0402;
