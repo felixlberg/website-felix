@@ -6,7 +6,7 @@ $(document).ready(function() {
 		$('h2').removeClass('active');
 		$('.' + userLang.split('-')[0]).addClass('active');
 	}
-
+	// Animate Css on load Animation
 	var $isAnimatedSec0 = $('#section0 .is-animated');
 	var $isAnimatedSec1 = $('#section1 .is-animated');
 	var $isAnimatedSec2 = $('#section2 .is-animated');
@@ -18,7 +18,6 @@ $(document).ready(function() {
         lockAnchors: false,
         anchors:['intro', 'me', 'id', 'contact',],
         navigation: false,
-
         //Scrolling
         css3: false,
         scrollingSpeed: 1000,
@@ -46,12 +45,10 @@ $(document).ready(function() {
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
         bigSectionsDestination: null,
-
         //Accessibility
         keyboardScrolling: true,
         animateAnchor: true,
         recordHistory: true,
-
         //Design
         controlArrows: true,
         verticalCentered: true,
@@ -60,14 +57,12 @@ $(document).ready(function() {
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,
-
         //Custom selectors
         sectionSelector: '.section',
         slideSelector: '.slide',
-
+		//Performance
         lazyLoading: true,
-
-        //events
+        //Events
         afterLoad: function(anchorLink, index){
 			/* Section1 Animations  */
 			if( index == 1 ){
@@ -81,7 +76,7 @@ $(document).ready(function() {
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		/* Sections Animations */
 		onLeave: function(index, nextIndex, direction){
-			/* Section 0 fallback */
+			/* Section 0 Fallback */
 			if (index == 2 && direction =='up') {
 				$isAnimatedSec0.eq(0).removeClass('animated fadeOut').addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
@@ -93,7 +88,7 @@ $(document).ready(function() {
 				$isAnimatedSec1.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
 				$isAnimatedSec1.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s'); 
 			}
-			/* Section 1 fallback */
+			/* Section 1 Fallback */
 			if (index == 3 && direction =='up') {
 				$isAnimatedSec1.eq(2).removeClass('animated fadeOut').addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
@@ -148,7 +143,7 @@ $(document).ready(function() {
 	}
 
 	window.onload = resize;
-	
+	//Nav Open
 	function navToggle(e) {
 		var closed = (navTrigger.className.indexOf('close') > 0);
 		if(closed) {
@@ -159,17 +154,11 @@ $(document).ready(function() {
 			nav.className = 'in';
 		}
 	}
-	
+	//Nav Close on Click
 	$(".nav-label").click(function() {
             setTimeout(function(){
 				navTrigger.className = 'nav-trigger open';
 				nav.className = 'out';
 			},0);
 		});
-
-	$('.txt').html(function(i, html) {
-	  var chars = $.trim(html).split("");
-
-	  return '<span>' + chars.join('</span><span>') + '</span>';
-	});
 });
