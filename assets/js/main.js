@@ -1,5 +1,12 @@
 $(document).ready(function() {
     'use strict';
+	// Browser Language Detection adding active class
+	var userLang = navigator.language || navigator.userLanguage;
+	if($('.' + userLang.split('-')[0]).length) {
+		$('h2').removeClass('active');
+		$('.' + userLang.split('-')[0]).addClass('active');
+	}
+
 	var $isAnimatedSec0 = $('#section0 .is-animated');
 	var $isAnimatedSec1 = $('#section1 .is-animated');
 	var $isAnimatedSec2 = $('#section2 .is-animated');
