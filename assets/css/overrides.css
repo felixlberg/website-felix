@@ -35,8 +35,12 @@ html.fp-enabled,
     height: auto !important;
 }
 /* Bootstrap */
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
 .container.zero{
-    margin-top: 10em;
+    margin-top: 10rem;
     z-index: 199;
 }
 .container.one,
@@ -47,7 +51,18 @@ html.fp-enabled,
 }
 .container.three {
     margin-top: 6em;
+    z-index: 199;
 }
+@media screen and (max-width: 450px) {
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    }
+.col-sm-6 {
+    position: absolute;
+    }
+}
+
 /* Sections Space Background */
 #section0{
     background: #000000 !important;
@@ -72,9 +87,6 @@ html.fp-enabled,
 }
     #nav li:hover a {
         color: #222;
-    }
-    .row {
-        vertical-align: middle
     }
 /*Animations*/
 @keyframes bounceOut {

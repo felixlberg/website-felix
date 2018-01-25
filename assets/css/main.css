@@ -1,39 +1,48 @@
 	@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
-	/* Header */
-	#header {
-		position: fixed;
-		z-index: 10000;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 3em;
-		line-height: 3em;
-		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-	}
-			#header .center{
-				margin-left: auto;
-				margin-right: auto;
-				width: 38px;
+		/*Intro*/
+		.intro {
+			margin-left:	auto;
+			margin-right:	auto;
+		}		
+	/* Title with Background*/
+			.title {
+				text-transform: uppercase;
+				font-size: 9rem;
+				font-weight: 500;
+				font-family: 'Luckiest Guy', cursive;
+				letter-spacing: 10px;
+				position: relative;
+				text-align: center;
+				height: 10em !important;
+				margin: auto !important;
 			}
-				#header .center img{
-					width: 100%;
-					margin-bottom: 3px;
-				}			
-	#logo {
-		position: absolute;
-		right: 1em;
-		top: 0;
-		height: 3em;
-		letter-spacing: 1px;
-		margin-top: 13px;
-		font-size: 16px;
-	}
-	.cover{
-		padding-top: 10em;
-		width: 100%;
-		height: 100%;
-		perspective: 340px;
-	}
+			.title div {
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-image: url("images/title.png");
+				width: 100%;
+				position: absolute; 
+			}
+			.title:after {
+				text-shadow:  0px 0px 8px rgba(185, 185, 185, 0.9);
+				color: transparent;
+			}
+			.shadow:after {
+				content: attr(title); /* Pulls the text from the 'title' attribute to make the shadow */
+			}	
+				/*Responsive*/
+				@media screen and (max-width: 1100px) {
+					.title {font-size: 7rem;}
+				}
+				@media screen and (max-width: 767px) {
+					.title {font-size: 5rem;}
+				}
+				@media screen and (max-width: 500px) {
+					.title {font-size: 4rem;}
+				}
+				@media screen and (max-width: 400px) {
+					.title {font-size: 3rem; letter-spacing: 4px;}
+				}
 	/*Sections*/
 	#section0,
 	#section1,
@@ -147,57 +156,6 @@
 				-moz-transform: rotate(-2deg);
 				transform: rotate(-2deg);
 			}
-			#bgvid {
-				position: fixed;
-				right: 0;
-				bottom: 0;
-				min-width: 100%;
-				min-height: 100%;
-		}
-	/*Intro*/
-		.intro {
-			margin-left:	auto;
-			margin-right:	auto;
-		}		
-	/* Title with Background*/
-			.title {
-				text-transform: uppercase;
-				font-size: 9rem;
-				font-weight: 500;
-				font-family: 'Luckiest Guy', cursive;
-				letter-spacing: 10px;
-				position: relative;
-				text-align: center;
-				height: 10em !important;
-				margin: auto !important;
-			}
-			.title div {
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-image: url("images/title.png");
-				width: 100%;
-				position: absolute; 
-			}
-			.title:after {
-				text-shadow:  0px 0px 8px rgba(185, 185, 185, 0.9);
-				color: transparent;
-			}
-			.shadow:after {
-				content: attr(title); /* Pulls the text from the 'title' attribute to make the shadow */
-			}	
-				/*Responsive*/
-				@media screen and (max-width: 1100px) {
-					.title {font-size: 7rem;}
-				}
-				@media screen and (max-width: 767px) {
-					.title {font-size: 5rem;}
-				}
-				@media screen and (max-width: 500px) {
-					.title {font-size: 4rem;}
-				}
-				@media screen and (max-width: 400px) {
-					.title {font-size: 3rem; letter-spacing: 4px;}
-				}
 	/* Text Box */
 	.textbox {
 		text-align: left;
@@ -217,7 +175,6 @@
 		.textbox h2.active {
 			display: block;
 		}
-
 		.textbox h3 {
 			text-transform: uppercase;
 			font-family: 'Luckiest Guy', cursive;
@@ -253,7 +210,7 @@
 					color: #decfbc;
 				}
 		}
-	/* Round Avatar */
+	/* Big Round Avatar */
 	.holder.big {
 		height: 30rem;
 		width: inherit;
@@ -298,12 +255,12 @@
 		}
 		@media screen and (max-width: 420px) {		
 			.holder.big.left{
-				padding: 21rem 0 0 0;
+				padding: 4rem 0 0 0;
 				display: table;
 				margin: auto;
 			}
 			.holder.big.right {
-				padding: 21rem 0 0 0;
+				padding: 4rem 0 0 0;
 				display: table;
 				margin: auto;
 			}
@@ -316,6 +273,12 @@
 			.holder.big img.user {
 				height: 18rem;
 				width: 18rem;	
+			}
+		}
+		@media screen and (max-height: 540px) {	
+			.holder.big img.user {
+				height: 14rem;
+				width: 14rem;	
 			}
 		}
 	.holder.big .avatar1 img.user {
@@ -408,3 +371,11 @@
 		background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDg2LjAwMSA4Ni4wMDEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDg2LjAwMSA4Ni4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNS45MDcsMjEuMDA0Yy0xLjM1Mi0xLjMzOC0zLjU0Mi0xLjMzOC00Ljg5NCwwYy0xLjM1LDEuMzM2LTEuMzUyLDMuNTA2LDAsNC44NDRsMzkuNTQsMzkuMTUgICBjMS4zNTIsMS4zMzgsMy41NDIsMS4zMzgsNC44OTQsMGwzOS41NC0zOS4xNWMxLjM1MS0xLjMzOCwxLjM1Mi0zLjUwNiwwLTQuODQ0Yy0xLjM1Mi0xLjMzOC0zLjU0Mi0xLjMzOC00Ljg5NC0wLjAwMkw0Myw1Ni43MDcgICBMNS45MDcsMjEuMDA0eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
 		background-size: contain;
 		}
+	/* Cover */
+	.cover{
+		position: relative;
+		width: 100px;
+		height: 100px;
+		perspective: 340px;
+		margin: 0 auto 0 auto;
+	}
