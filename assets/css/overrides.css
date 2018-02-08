@@ -53,7 +53,7 @@ html.fp-enabled,
     margin-top: 6em;
     z-index: 199;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 .row {
     margin-right: 0;
     margin-left: 0;
