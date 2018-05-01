@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var userLang = navigator.language || navigator.userLanguage;
 	if($('.' + userLang.split('-')[0]).length) {
 		$('h2').removeClass('active');
+    $('p').removeClass('active');
 		$('.' + userLang.split('-')[0]).addClass('active');
 	}
 	// Animate Css on load Animation
@@ -12,7 +13,6 @@ $(document).ready(function() {
 	var $isAnimatedSec2 = $('#section2 .is-animated');
 	// Fullpage Scroll
 	$('#fullpage').fullpage({
-        
 		//Navigation
         menu: '#nav',
         lockAnchors: false,
@@ -60,7 +60,7 @@ $(document).ready(function() {
         //Custom selectors
         sectionSelector: '.section',
         slideSelector: '.slide',
-		//Performance
+		    //Performance
         lazyLoading: true,
         //Events
         afterLoad: function(anchorLink, index){
@@ -69,24 +69,23 @@ $(document).ready(function() {
 				$isAnimatedSec0.eq(0).addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
 		},
-        afterRender: function(){},
-        afterResize: function(){},
-		
-        afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		/* Sections Animations */
-		onLeave: function(index, nextIndex, direction){
+      afterRender: function(){},
+      afterResize: function(){},
+
+      afterResponsive: function(isResponsive){},
+      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+	    /* Sections Animations */
+		  onLeave: function(index, nextIndex, direction){
 			/* Section 0 Fallback */
 			if (index == 2 && direction =='up') {
 				$isAnimatedSec0.eq(0).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section1 Animations  */
-			else if ( index == 1 && nextIndex == 2 ){ 
+			else if ( index == 1 && nextIndex == 2 ){
 				$isAnimatedSec0.eq(0).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
-				
-				$isAnimatedSec1.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s'); 
+				$isAnimatedSec1.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s');
 				$isAnimatedSec1.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
-				$isAnimatedSec1.eq(2).addClass('animated fadeIn').css('animation-delay', '1s'); 
+				$isAnimatedSec1.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section 1 Fallback */
 			if (index == 3 && direction =='up') {
@@ -95,70 +94,43 @@ $(document).ready(function() {
 			/* Section2 Animations */
 			else if( ( index == 3 || index == 2 ) && nextIndex == 3 ) {
 				$isAnimatedSec1.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
-
 				$isAnimatedSec2.eq(0).addClass('animated fadeIn').css('animation-delay', '.5s');
 				$isAnimatedSec2.eq(1).addClass('animated fadeInRight').css('animation-delay', '.2s');
-				$isAnimatedSec2.eq(2).addClass('animated fadeIn').css('animation-delay', '1s'); 
+				$isAnimatedSec2.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section3 Animations */
 			else if (index == 3 && direction =='down') {
 				$isAnimatedSec2.eq(2).removeClass('animated fadeIn').addClass('animated fadeOut').css('animation-delay', '.2s');
 			}
-			/* Section 3 fallback */
+			/* Section 3 Fallback */
 			if (index == 4 && direction =='up') {
 				$isAnimatedSec2.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 		}
    });
 	//Nav
-	// selected elements
+	// Selected Elements
+  var nav = document.getElementById('nav');
 	var navTrigger = document.getElementById('nav-trigger');
-	var nav = document.getElementById('nav');
-	var header = document.getElementById('header');
-	var heading = document.getElementById('heading');
-	var labels = document.getElementsByClassName('nav-label');
-
-	// sizing
-	var windowHeight = window.innerHeight;
-	var windowWidth = window.innerWidth;
-	var fontSize = windowHeight*0.1;
-	var headingSize = windowWidth*0.1;
-
+	var navLabels = document.getElementsByClassName('nav-label');
 	// Event Listening
-	navTrigger.addEventListener('click', navToggle);	
-	window.addEventListener('resize', resize);
-
-	function resize() {
-		windowHeight = window.innerHeight;
-		windowWidth = window.innerWidth;
-		fontSize = windowHeight*0.1;
-		headingSize = windowWidth*0.1;
-		if(headingSize > windowHeight*0.3) headingSize = windowHeight*0.3; 
-	 
-		for(var i = 0; i < labels.length; i++) {
-			labels[i].style.fontSize = fontSize+'px';
-			labels[i].style.height = fontSize+'px';
-			labels[i].style.marginTop = '-'+fontSize*0.6+'px';
-		}
-	}
-
-	window.onload = resize;
+	navTrigger.addEventListener('click', navToggle);
 	//Nav Open
 	function navToggle(e) {
 		var closed = (navTrigger.className.indexOf('close') > 0);
 		if(closed) {
 			navTrigger.className = 'nav-trigger open';
-			nav.className = 'out';
+			nav.className = 'nav out animated fadeOutUp';
 		} else {
 			navTrigger.className = 'nav-trigger close';
-			nav.className = 'in';
+			nav.className = 'nav in animated fadeInDown';
 		}
 	}
 	//Nav Close on Click
-	$(".nav-label").click(function() {
+	$(navLabels).click(function() {
             setTimeout(function(){
 				navTrigger.className = 'nav-trigger open';
-				nav.className = 'out';
-			},0);
+				nav.className = 'nav out';
+			},100);
 		});
 });
