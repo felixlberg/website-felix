@@ -83,7 +83,7 @@
 		width: 120%;
 		height: 30rem;
 		background-color: #5c0402;
-		top: -270px;
+		top: -280px;
 		-webkit-transform: rotate(-4deg);
 		-moz-transform: rotate(-4deg);
 		transform: rotate(-4deg);
@@ -95,7 +95,7 @@
 		width: 120%;
 		height: 30rem;
 		background-color: #decfbc;
-		bottom: -270px;
+		bottom: -280px;
 		-webkit-transform: rotate(5deg);
 		-moz-transform: rotate(5deg);
 		transform: rotate(5deg);
@@ -198,9 +198,6 @@
 	}
 /* Round Avatar */
 .holder {
-	width: 50%;
-	text-align: center;
-	z-index: 99;
 	margin-left: auto;
 	margin-right: auto;
 }

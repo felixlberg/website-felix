@@ -120,17 +120,17 @@ $(document).ready(function() {
 		var closed = (navTrigger.className.indexOf('close') > 0);
 		if(closed) {
 			navTrigger.className = 'nav-trigger open';
-			nav.className = 'nav out animated fadeOutUp';
+			nav.className = 'nav out animated slideOutLeft';
 		} else {
 			navTrigger.className = 'nav-trigger close';
-			nav.className = 'nav in animated fadeInDown';
+			nav.className = 'nav in animated slideInRight';
 		}
 	}
 	//Nav Close on Click
 	$(navLabels).click(function() {
-            setTimeout(function(){
+      setTimeout(function(){
 				navTrigger.className = 'nav-trigger open';
-				nav.className = 'nav out';
-			},100);
+				nav.className = 'nav out animated slideOutLeft';
+			},300);
 		});
 });

@@ -32,13 +32,13 @@
 	  <span class="line"></span>
 	  <span class="line"></span>
 	</div>
-	<div id="nav" class="nav out is-animated">
+	<div id="nav" class="nav out animated">
 	  <ul>
-		<li><a data-menuanchor="intro" href="#intro" class="nav-label active">Intro</a></li>
-		<li><a data-menuanchor="me" href="#me" class="nav-label">About Me</a></li>
-		<li><a data-menuanchor="id" href="#id" class="nav-label">The Mission</a></li>
-		<li><a data-menuanchor="contact" href="#contact" class="nav-label">Contact</a></li>
-		<li><a class="nav-label">Soon</a></li>
+  		<li><a data-menuanchor="intro" href="#intro" class="nav-label active"><span>Intro</span></a></li>
+  		<li><a data-menuanchor="me" href="#me" class="nav-label"><span>About Me</span></a></li>
+  		<li><a data-menuanchor="id" href="#id" class="nav-label"><span>The Mission</span></a></li>
+  		<li><a data-menuanchor="contact" href="#contact" class="nav-label"><span>Contact</span></a></li>
+  		<li><a class="nav-label"><span>Soon</span></a></li>
 	  </ul>
 	</div>
 	<div id="fullpage" class="glass">
@@ -112,45 +112,25 @@
 			<div class="stars"></div>
 		</div>
 		<div class="container footer">
-			<div class="row avatars">
-        <div class="col m3">
-          <div class="holder">
-  					<div class="avatar">
-  					<a href="https://es.linkedin.com/in/felix-langenberg-aa9417146"><img src="images/thumbs/linkedin.svg" class="user"/>
-  						<span class="tooltip">Follow Me on LinkedIn</span>
-  					</a>
-  					</div>
-  				</div>
-        </div>
-        <div class="col m3">
-  				<div class="holder">
-  					<div class="avatar">
-  					<a href="https://github.com/felixlberg"><img src="images/thumbs/github.svg" class="user"/>
-  						<span class="tooltip">Follow Me on Github</span>
-  					</a>
-  					</div>
-  				</div>
-        </div>
-        <div class="col m3">
-          <div class="holder">
-            <div class="avatar">
-            <a href="https://github.com/felixlberg"><img src="images/thumbs/github.svg" class="user"/>
-              <span class="tooltip">Follow Me on Github</span>
-            </a>
+      <div class="row footer">
+        <form action="https://42b4eg1ntd.execute-api.eu-west-1.amazonaws.com/dev/" method="post">
+            <input type="hidden" name="_to" value="felix.lberg@gmail.com">
+            <input type="text" name="_honeypot" value="" style="display:none">
+            <div class="input-field col s6">
+              <input placeholder="Ihr Name" type="text" tabindex="1" required>
             </div>
-          </div>
-        </div>
-        <div class="col m3">
-          <div class="holder">
-            <div class="avatar">
-            <a href="https://github.com/felixlberg"><img src="images/thumbs/github.svg" class="user"/>
-              <span class="tooltip">Follow Me on Github</span>
-            </a>
+            <div class="input-field col s6">
+              <input placeholder="Ihre Email" type="email" name="usermail" tabindex="2" required>
             </div>
-          </div>
-        </div>
-			</div>
-		</div>
+            <div class="input-field col s10">
+              <textarea class="materialize-textarea" placeholder="Geben Sie Ihre Nachricht hier ein...." type="text" name="message" tabindex="4" required></textarea>
+            </div>
+            <div class="input-field col s2">
+              <input class="btn" type="submit" value="senden">
+            </div>
+        </form>
+      </div>
+    </div>
 	</div>
 	<link rel="stylesheet" type="text/css" href="assets/css/stars.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css" />

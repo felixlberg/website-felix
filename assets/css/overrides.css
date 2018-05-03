@@ -36,18 +36,26 @@ html.fp-enabled,
 }
 /* Meterialize */
 
-.row {
-  width: inherit;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-  .row.avatars {
-    transform: translate(0, -10%);
-  }
 .container.footer {
-  min-height: 300px;
+
 }
+
+/* Contact Form */
+ .input-field input[type=text]:focus,
+ .input-field input[type=email]:focus,
+  textarea.materialize-textarea:focus {
+  border-bottom: 1px solid #5c0402 !important;
+  box-shadow: 0 1px 0 0 #5c0402 !important;
+}
+ .btn {
+  color: #222 !important;
+  background-color: #decfbc !important;
+  }
 /* Sections Space Background */
 #section0{
     background: #000000 !important;
@@ -62,13 +70,4 @@ html.fp-enabled,
     50% {box-shadow: 0 0 0 7px rgb(85, 46, 46);opacity: 1;}
     75% {box-shadow: 0 0 0 4px #633;opacity: 1;}
     100% {box-shadow: 0 0 0 5px rgb(85, 27, 26);opacity: 1;}
-}
-@keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
-  0% {opacity: 0;transform: scale3d(.3, .3, .3);}
-  20% {transform: scale3d(1.1, 1.1, 1.1);}
-  40% {transform: scale3d(.9, .9, .9);}
-  60% {opacity: 1;transform: scale3d(1.03, 1.03, 1.03);}
-  80% {transform: scale3d(.97, .97, .97);}
-  to {opacity: 1;transform: scale3d(1, 1, 1);}
 }
