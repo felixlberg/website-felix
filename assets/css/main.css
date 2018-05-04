@@ -41,7 +41,7 @@
 		.title {font-size: 4rem;}
 	}
 	@media screen and (max-width: 400px) {
-		.title {font-size: 3rem; letter-spacing: 4px;}
+		.title {font-size: 38px; letter-spacing: 2px;}
 	}
 /*Sections*/
 #section0,
@@ -125,12 +125,12 @@
 		transform: rotate(7deg);
 	}
 	/*responsive*/
-	@media screen and (max-width: 767px) {
+@media screen and (max-height: 800px) {
 	#section1:before{
-		height: 28rem;
+		height: 23rem;
 	}
 	#section2:before{
-		height: 28rem;
+		height: 22rem;
 	}
 	#section1:after {
 		height: 25rem;
@@ -186,9 +186,19 @@
 	}
 	.textbox p {
 		display: none;
+		margin: 0 0 2.5rem 0;
 		font-size: 18px;
 		color: #decfbc;
 	}
+	 @media screen and (max-width: 400px) {
+		 .textbox h2 {
+			 font-size: 22px;
+		 }
+		 .textbox p {
+			 font-size: 16px;
+		 }
+	 }
+
 	/* Language Activator */
 	.textbox h2.active{
 		display: block;
@@ -201,9 +211,24 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+	.holder a{
+		width: 100%;
+		text-align: center
+	}
+.avatar {
+	display: flex;
+	align-items: center;
+}
+
 	.holder img.user {
 		height: 100%;
 		width: 100%;
+	}
+		@media screen and (max-width: 600px) {
+		.holder img.user{
+			height: 50%;
+			width: 50%;
+		}
 	}
 	.holder .avatar img.user {
 		border-radius: 50%;
