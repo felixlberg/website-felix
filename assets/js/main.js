@@ -20,7 +20,7 @@ $(document).ready(function() {
         navigation: false,
         //Scrolling
         css3: false,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 700,
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
@@ -66,7 +66,9 @@ $(document).ready(function() {
         afterLoad: function(anchorLink, index){
 			/* Section1 Animations  */
 			if( index == 1 ){
-				$isAnimatedSec0.eq(0).addClass('animated bounceInUp').css('animation-delay', '1s');
+        $isAnimatedSec0.eq(0).addClass('animated zoomIn').css('animation-delay', '.4s');
+        $isAnimatedSec0.eq(1).addClass('animated zoomIn').css('animation-delay', '.6s');
+				$isAnimatedSec0.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
 		},
       afterRender: function(){},
@@ -78,7 +80,7 @@ $(document).ready(function() {
 		  onLeave: function(index, nextIndex, direction){
 			/* Section 0 Fallback */
 			if (index == 2 && direction =='up') {
-				$isAnimatedSec0.eq(0).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+				$isAnimatedSec0.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section1 Animations  */
 			else if ( index == 1 && nextIndex == 2 ){
@@ -131,6 +133,6 @@ $(document).ready(function() {
       setTimeout(function(){
 				navTrigger.className = 'nav-trigger open';
 				nav.className = 'nav out animated slideOutLeft';
-			},300);
+			},200);
 		});
 });

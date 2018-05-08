@@ -112,19 +112,16 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 5rem;
-
 }
-
   @media screen and (max-width: 600px) {
   .nav span {
     font-size: 3rem;
     letter-spacing: 0.05em;
   }
 }
-
- .nav li:hover a {
-    text-shadow: 0px 0px 15px rgba(92, 4, 2, 1);
+.nav li a.active  {
+  text-shadow: 0px 0px 5px rgba(205, 0, 0, 1);
 }
- .nav li.active a {
-	 text-shadow: 0px 0px 15px rgba(92, 4, 2, 1);
- }
+ .nav li:hover a {
+    text-shadow: 0px 0px 20px rgba(205, 0, 0, 1);
+}

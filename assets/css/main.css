@@ -13,8 +13,8 @@
 	letter-spacing: 10px;
 	position: relative;
 	text-align: center;
-	height: 10em !important;
 	margin: auto !important;
+	padding-bottom: 6rem;
 }
 .title div {
 	-webkit-background-clip: text;
@@ -30,18 +30,23 @@
 .shadow:after {
 	content: attr(title); /* Pulls the text from the 'title' attribute to make the shadow */
 }
-	/*Responsive*/
 	@media screen and (max-width: 1100px) {
-		.title {font-size: 7rem;}
+		.title {font-size: 7rem; letter-spacing: 5px;}
 	}
 	@media screen and (max-width: 767px) {
-		.title {font-size: 5rem;}
+		.title {font-size: 80px; letter-spacing: 3px;}
+	}
+	@media screen and (max-width: 660px) {
+		.title {font-size: 70px;}
+	}
+	@media screen and (max-width: 560px) {
+		.title {font-size: 62px; letter-spacing: 2.5px;}
 	}
 	@media screen and (max-width: 500px) {
-		.title {font-size: 4rem;}
+		.title {font-size: 46px;letter-spacing: 2px;}
 	}
 	@media screen and (max-width: 400px) {
-		.title {font-size: 38px; letter-spacing: 2px;}
+		.title {font-size: 38px;}
 	}
 /*Sections*/
 #section0,
@@ -70,7 +75,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #5c0402;
+		background-color: #cd0000;
 		bottom: -200px;
 		-webkit-transform: rotate(4deg);
 		-moz-transform: rotate(4deg);
@@ -82,7 +87,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #5c0402;
+		background-color: #cd0000;
 		top: -280px;
 		-webkit-transform: rotate(-4deg);
 		-moz-transform: rotate(-4deg);
@@ -118,7 +123,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #5c0402;
+		background-color: #cd0000;
 		bottom: -230px;
 		-webkit-transform: rotate(7deg);
 		-moz-transform: rotate(7deg);
@@ -149,7 +154,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #5c0402;
+		background-color: #cd0000;
 		top: -350px;
 		-webkit-transform: rotate(-2deg);
 		-moz-transform: rotate(-2deg);
@@ -186,19 +191,22 @@
 	}
 	.textbox p {
 		display: none;
-		margin: 0 0 2.5rem 0;
+		margin-bottom: 2.5rem;
 		font-size: 18px;
 		color: #decfbc;
 	}
 	 @media screen and (max-width: 400px) {
 		 .textbox h2 {
+			 margin-top: 1rem;
+			 margin-bottom: 0;
 			 font-size: 36px;
 		 }
 		 .textbox p {
 			 font-size: 16px;
+			 margin-top: 0;
+			 margin-bottom: 1rem;
 		 }
 	 }
-
 	/* Language Activator */
 	.textbox h2.active{
 		display: block;
@@ -219,7 +227,6 @@
 	display: flex;
 	align-items: center;
 }
-
 	.holder img.user {
 		height: 100%;
 		width: 100%;
@@ -232,8 +239,8 @@
 	}
 	.holder .avatar img.user {
 		border-radius: 50%;
-		background-color: #5c0402;
-		box-shadow: 0 0 0 5px #5c0402;
+		background-color: #cd0000;
+		box-shadow: 0 0 0 5px #cd0000;
 	}
 	.holder .avatar img.user:hover {
 		cursor: pointer;
