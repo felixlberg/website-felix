@@ -58,9 +58,9 @@ html.fp-enabled,
    height: 5rem;
    color: #ffffff !important;
    background-color: #222 !important;
-   box-shadow: 0 0 0 5px #5c0402;
+   box-shadow: 0 0 0 5px #b30000;
    background-size: contain;
-   background-image: url("../../images/dev.png");
+   background-image: url("../../images/email.svg");
   }
 /*
   .btn:hover {

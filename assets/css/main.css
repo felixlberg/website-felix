@@ -75,7 +75,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #cd0000;
+		background-color: #b30000;
 		bottom: -200px;
 		-webkit-transform: rotate(4deg);
 		-moz-transform: rotate(4deg);
@@ -87,7 +87,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #cd0000;
+		background-color: #b30000;
 		top: -280px;
 		-webkit-transform: rotate(-4deg);
 		-moz-transform: rotate(-4deg);
@@ -123,7 +123,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #cd0000;
+		background-color: #b30000;
 		bottom: -230px;
 		-webkit-transform: rotate(7deg);
 		-moz-transform: rotate(7deg);
@@ -131,6 +131,9 @@
 	}
 	/*responsive*/
 @media screen and (max-height: 800px) {
+	#section0:after {
+		height: 23rem;
+	}
 	#section1:before{
 		height: 23rem;
 	}
@@ -154,7 +157,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #cd0000;
+		background-color: #b30000;
 		top: -350px;
 		-webkit-transform: rotate(-2deg);
 		-moz-transform: rotate(-2deg);
@@ -239,8 +242,8 @@
 	}
 	.holder .avatar img.user {
 		border-radius: 50%;
-		background-color: #cd0000;
-		box-shadow: 0 0 0 5px #cd0000;
+		background-color: #b30000;
+		box-shadow: 0 0 0 5px #b30000;
 	}
 	.holder .avatar img.user:hover {
 		cursor: pointer;
