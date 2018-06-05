@@ -8,15 +8,16 @@ $(document).ready(function() {
 		$('.' + userLang.split('-')[0]).addClass('active');
 	}
 	// Animate Css on load Animation
-	var $isAnimatedSec0 = $('#section0 .is-animated');
-	var $isAnimatedSec1 = $('#section1 .is-animated');
-	var $isAnimatedSec2 = $('#section2 .is-animated');
+	var $first = $('#section0 .is-animated');
+	var $second = $('#section1 .is-animated');
+	var $third = $('#section2 .is-animated');
+  var $fourth = $('#section3 .is-animated');
 	// Fullpage Scroll
 	$('#fullpage').fullpage({
 		//Navigation
         menu: '#nav',
         lockAnchors: false,
-        anchors:['intro', 'me', 'id', 'contact',],
+        anchors:['intro', 'me', 'id', 'product', 'contact',],
         navigation: false,
         //Scrolling
         css3: false,
@@ -65,10 +66,10 @@ $(document).ready(function() {
         //Events
         afterLoad: function(anchorLink, index){
 			/* Section1 Animations  */
-			if( index == 1 ){
-        $isAnimatedSec0.eq(0).addClass('animated zoomIn').css('animation-delay', '.4s');
-        $isAnimatedSec0.eq(1).addClass('animated zoomIn').css('animation-delay', '.6s');
-				$isAnimatedSec0.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s');
+			if ( index == 1 ) {
+        $first.eq(0).addClass('animated zoomIn').css('animation-delay', '.4s');
+        $first.eq(1).addClass('animated zoomIn').css('animation-delay', '.6s');
+				$first.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s');
 			}
 		},
       afterRender: function(){},
@@ -80,34 +81,45 @@ $(document).ready(function() {
 		  onLeave: function(index, nextIndex, direction){
 			/* Section 0 Fallback */
 			if (index == 2 && direction =='up') {
-				$isAnimatedSec0.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+				$first.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section1 Animations  */
 			else if ( index == 1 && nextIndex == 2 ){
-				$isAnimatedSec0.eq(0).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
-				$isAnimatedSec1.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s');
-				$isAnimatedSec1.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
-				$isAnimatedSec1.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
+				$first.eq(0).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
+				$second.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s');
+				$second.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
+				$second.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section 1 Fallback */
 			if (index == 3 && direction =='up') {
-				$isAnimatedSec1.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+				$second.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
 			}
 			/* Section2 Animations */
-			else if( ( index == 3 || index == 2 ) && nextIndex == 3 ) {
-				$isAnimatedSec1.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
-				$isAnimatedSec2.eq(0).addClass('animated fadeIn').css('animation-delay', '.5s');
-				$isAnimatedSec2.eq(1).addClass('animated fadeInRight').css('animation-delay', '.2s');
-				$isAnimatedSec2.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
+			else if( ( index == 1 || index == 2 ) && nextIndex == 3 ) {
+				$second.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
+				$third.eq(0).addClass('animated fadeIn').css('animation-delay', '.5s');
+				$third.eq(1).addClass('animated fadeInRight').css('animation-delay', '.2s');
+				$third.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
 			}
-			/* Section3 Animations */
-			else if (index == 3 && direction =='down') {
-				$isAnimatedSec2.eq(2).removeClass('animated fadeIn').addClass('animated fadeOut').css('animation-delay', '.2s');
+      /* Section 2 Fallback */
+      if (index == 4 && direction =='up') {
+        $third.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+      }
+      /* Section3 Animations */
+			else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
+        $third.eq(2).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
+        $fourth.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s');
+				$fourth.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
+				$fourth.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
 			}
-			/* Section 3 Fallback */
-			if (index == 4 && direction =='up') {
-				$isAnimatedSec2.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
-			}
+      /* Section 3 Fallback */
+      if (index == 4 && direction =='down') {
+        $fourth.eq(2).removeClass('animated fadeIn').addClass('animated fadeOut').css('animation-delay', '.2s');
+      }
+      /* Section 4 Fallback */
+      if (index == 5 && direction =='up') {
+        $fourth.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '.2s');
+      }
 		}
    });
 	//Nav

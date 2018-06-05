@@ -51,7 +51,8 @@
 /*Sections*/
 #section0,
 #section1,
-#section2{
+#section2,
+#section3{
 	background: -moz-radial-gradient(center, circle cover, #555A5F 0%, #000 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555A5F), color-stop(100%, #000));
 	background: -webkit-radial-gradient(center, circle cover, #555A5F 0%, #000 100%);
@@ -129,7 +130,31 @@
 		-moz-transform: rotate(7deg);
 		transform: rotate(7deg);
 	}
-	/*responsive*/
+	#section3:before {
+		content: '';
+		position: absolute;
+		left: -50px;
+		width: 120%;
+		height: 30rem;
+		background-color: #b30000;
+		top: -260px;
+		-webkit-transform: rotate(-3deg);
+		-moz-transform: rotate(-3deg);
+		transform: rotate(-3deg);
+	}
+	#section3:after{
+		content: '';
+		position: absolute;
+		left: -50px;
+		width: 120%;
+		height: 30rem;
+		background-color: #decfbc;
+		bottom: -280px;
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		transform: rotate(7deg);
+	}
+/*Responsive*/
 @media screen and (max-height: 800px) {
 	#section0:after {
 		height: 23rem;
@@ -140,10 +165,16 @@
 	#section2:before{
 		height: 22rem;
 	}
+	#section2:before{
+		height: 20rem;
+	}
 	#section1:after {
 		height: 25rem;
 	}
 	#section2:after{
+		height: 20rem;
+	}
+	#section3:after{
 		height: 20rem;
 	}
 }
@@ -157,7 +188,7 @@
 		left: -50px;
 		width: 120%;
 		height: 30rem;
-		background-color: #b30000;
+		background-color: #decfbc;
 		top: -350px;
 		-webkit-transform: rotate(-2deg);
 		-moz-transform: rotate(-2deg);
@@ -231,6 +262,8 @@
 	align-items: center;
 }
 	.holder img.user {
+		max-height: 340px;
+		max-width: 340px;
 		height: 100%;
 		width: 100%;
 	}
