@@ -2,4 +2,4 @@
 
 feel free to use this well coded fullpage.js & animate.css template.
 
-![Screenshot](/path/to/screenshot.jpg)
+![Screenshot](screenshot.jpg)
