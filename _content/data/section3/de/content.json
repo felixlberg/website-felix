@@ -1,7 +1,7 @@
 {
   "type": "Text",
   "data": {
-    "text": "test"
+    "text": "Mein Aktuelles Projekt ist <a href=\"https://fullpage.xyz\">Fullpage.xyz</a> ein node.js CMS mit Fokus auf Design und Flexibilität und ich betreibe ebenfalls die Website <a href=\"https://shop.mallorca-luxury.com\">Mallorca Luxury</a>.&nbsp; Aktuell angestellt bin ich CTO bei der Firma Thurm Concept S.L. und habe auch hier anspruchsvolle Backend Losungen programmiert. UI / UX Design ist mir ebenfalls wichtig, verkleinern sie dazu einfach einmal ihr Browser Fenster und achten auf den PC."
   },
   "path": "/section3/de/content",
   "createdAt": "2017-12-03T09:14:46.914Z",
