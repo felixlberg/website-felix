@@ -1,4 +1,4 @@
-# These are the files for my personal website langenberg.io
+# Static Website Template with simplajs in-context editing features ready to 
 
 ![Screenshot](screenshot.jpg)
 
