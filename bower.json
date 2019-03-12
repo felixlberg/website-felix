@@ -1,0 +1,22 @@
+{
+  "name": "Felix Langenberg",
+  "main": "index.js",
+  "homepage": "https://felixlberg.github.io",
+  "description": "",
+  "authors": [
+    "Felix Langenberg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "simpla-admin": "^1.3.1",
+    "simpla-img": "^1.3.2",
+    "simpla-paths": "^1.0.2",
+    "simpla-text": "^1.2.2"
+  }
+}
