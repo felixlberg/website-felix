@@ -1,7 +1,9 @@
-# Static Website Template with simplajs in-context editing features ready to 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/545f063d-b1ec-47ec-8908-e544fb8f68ee/deploy-status)](https://app.netlify.com/sites/underground-consulting/deploys)
+
+# Static Website Template with simplajs in-context editing features ready for modern web3
 
 ![Screenshot](screenshot.jpg)
 
 ----
 
-feel free to use this well coded fullpage.js & animate.css template.
+Feel free to use this well coded fullpage.js, materialize, simplajs and animate.css template.

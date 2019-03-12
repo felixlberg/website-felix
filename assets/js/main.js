@@ -7,11 +7,6 @@ $(document).ready(function() {
     $('p').removeClass('active');
 		$('.' + userLang.split('-')[0]).addClass('active');
 	}
-	// Animate Css on load Animation
-	var $first = $('#section0 .is-animated');
-	var $second = $('#section1 .is-animated');
-	var $third = $('#section2 .is-animated');
-  var $fourth = $('#section3 .is-animated');
 	//Nav
 	// Selected Elements
   var nav = document.getElementById('nav');

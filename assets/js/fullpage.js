@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  // Animate css on load animation
+  var $first = $('#section0 .is-animated');
+  var $second = $('#section1 .is-animated');
+  var $third = $('#section2 .is-animated');
+  var $fourth = $('#section3 .is-animated');
   // Fullpage.js Initialisation more info at https://github.com/alvarotrigo/fullpage.js
   $('#fullpage').fullpage({
     //Navigation
