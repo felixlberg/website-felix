@@ -2,7 +2,7 @@
 const SIMPLA_CONFIG = {
   repo: 'felixlberg/website-felix',
   auth: new SimplaNetlify({ site: 'underground-consulting.netlify.com' }),
-  source: window.location.origin,
+  source: 'https://underground-consulting.netlify.com',
   branch: 'master'
 };
 // Simplajs Init
