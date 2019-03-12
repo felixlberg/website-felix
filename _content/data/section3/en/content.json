@@ -1,9 +1,9 @@
 {
   "type": "Text",
   "data": {
-    "text": "test"
+    "text": "My current project is <a href=\"https://fullpage.xyz\">fullpage.xyz</a> a node.js CMS with focus on design and flexibility and I also run <a href=\"https://shop.mallorca-luxury.com\">this</a> website. Currently I am working as&nbsp; CTO at Thurm Concept S.L. and I've coded some sophisticated back end solutions there as well. UI / UX Design is also important to me,&nbsp; just try reduce the size of your browser window and pay attention to the PC."
   },
   "path": "/section3/en/content",
   "createdAt": "2017-12-03T09:14:46.914Z",
-  "updatedAt": "2019-03-12T11:39:27.593Z"
+  "updatedAt": "2019-03-12T15:13:02.316Z"
 }
