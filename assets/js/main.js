@@ -7,14 +7,15 @@ $(document).ready(function() {
     $('p').removeClass('active');
 		$('.' + userLang.split('-')[0]).addClass('active');
 	}
-	//Nav
+
+	// Nav
 	// Selected Elements
   var nav = document.getElementById('nav');
 	var navTrigger = document.getElementById('nav-trigger');
 	var navLabels = document.getElementsByClassName('nav-label');
 	// Event Listening
 	navTrigger.addEventListener('click', navToggle);
-	//Nav Open
+	// Open
 	function navToggle(e) {
 		var closed = (navTrigger.className.indexOf('close') > 0);
 		if(closed) {
@@ -25,11 +26,20 @@ $(document).ready(function() {
 			nav.className = 'nav in animated slideInRight';
 		}
 	}
-	//Nav Close on Click
+	// Close on Click
 	$(navLabels).click(function() {
       setTimeout(function(){
 				navTrigger.className = 'nav-trigger open';
 				nav.className = 'nav out animated slideOutLeft';
 			},200);
 		});
+
+  // Fade In Diagonals
+  setTimeout(function(){
+    var diagonals = document.querySelectorAll('#section1, #section2, #section3, #footer')
+      for (var i = 0; i < diagonals.length; i++) {
+        $(diagonals[i]).addClass('animated fadeIn');
+      }
+  },200);
+
 });

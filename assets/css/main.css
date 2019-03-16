@@ -65,11 +65,20 @@
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+	min-height: 100vh;
+}
+/* Make all other sections invisible upon start */
+#section1,
+#section2,
+#section3,
+#footer{
+	opacity: 0;
 }
 /* Header Font Size */
 #section0 span {
 	font-size: 0.7em;
 }
+	/* Section diagonals */
 	#section0:after {
 		content: '';
 		position: absolute;

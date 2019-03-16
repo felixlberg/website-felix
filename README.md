@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/545f063d-b1ec-47ec-8908-e544fb8f68ee/deploy-status)](https://app.netlify.com/sites/underground-consulting/deploys)
 
-# Static Website Template with simplajs in-context editing features ready for modern web3
+# Static Website Template with simplajs, JAMStack ready for modern web!
 
 ![Screenshot](screenshot.jpg)
 
