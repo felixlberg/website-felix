@@ -15,6 +15,7 @@
 	text-align: center;
 	margin: auto !important;
 	padding-bottom: 6rem;
+	opacity: 0;
 }
 .title div {
 	-webkit-background-clip: text;

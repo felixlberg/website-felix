@@ -59,9 +59,10 @@ $(document).ready(function() {
         afterLoad: function(anchorLink, index){
           /* Section1 Animations  */
           if ( index == 1 ) {
-            $first.eq(0).addClass('animated zoomIn').css('animation-delay', '.4s');
-            $first.eq(1).addClass('animated zoomIn').css('animation-delay', '.6s');
-            $first.eq(2).addClass('animated bounceInUp').css('animation-delay', '1s');
+            $first.eq(0).addClass('animated fadeIn').css('animation-delay', '.2s');
+            $first.eq(1).addClass('animated zoomIn').css('animation-delay', '.4s');
+            $first.eq(2).addClass('animated zoomIn').css('animation-delay', '.6s');
+            $first.eq(3).addClass('animated bounceInUp').css('animation-delay', '1s');
           }
         },
         afterRender: function(){},
