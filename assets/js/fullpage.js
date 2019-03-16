@@ -73,18 +73,18 @@ $(document).ready(function() {
         onLeave: function(index, nextIndex, direction){
           /* Section 0 Fallback */
           if (index == 2 && direction =='up') {
-            $first.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+            $first.eq(3).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
           }
           /* Section1 Animations  */
           else if ( index == 1 && nextIndex == 2 ){
-            $first.eq(0).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
+            $first.eq(3).removeClass('animated bounceInUp').addClass('animated fadeOut').css('animation-delay', '.2s');
             $second.eq(0).addClass('animated fadeInLeft').css('animation-delay', '.2s');
             $second.eq(1).addClass('animated fadeIn').css('animation-delay', '.5s');
             $second.eq(2).addClass('animated fadeIn').css('animation-delay', '1s');
           }
           /* Section 1 Fallback */
           if (index == 3 && direction =='up') {
-            $second.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+            $second.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '.6s');
           }
           /* Section2 Animations */
           else if( ( index == 1 || index == 2 ) && nextIndex == 3 ) {
@@ -95,7 +95,7 @@ $(document).ready(function() {
           }
           /* Section 2 Fallback */
           if (index == 4 && direction =='up') {
-            $third.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '1s');
+            $third.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '.6s');
           }
           /* Section3 Animations */
           else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
