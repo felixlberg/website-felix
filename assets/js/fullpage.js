@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  "use strict";
   // Animate css on load animation
   var $first = $('#section0 .is-animated');
   var $second = $('#section1 .is-animated');

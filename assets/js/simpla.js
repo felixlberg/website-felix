@@ -1,3 +1,4 @@
+'use strict';
 // In-Context Edit Configuration by Simplajs https://github.com/simplajs/simpla
 const SIMPLA_CONFIG = {
   repo: 'felixlberg/website-felix',
