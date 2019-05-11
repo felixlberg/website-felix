@@ -317,3 +317,10 @@
 	perspective: 340px;
 	margin: 0 auto 0 auto;
 }
+/* Contact form */
+#honeypot {
+  display: none;
+}
+.thankyou_message {
+	color: #decfbc;
+}

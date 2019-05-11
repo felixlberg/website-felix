@@ -35,42 +35,29 @@ html.fp-enabled,
     height: auto !important;
 }
 /* Meterialize */
-
 .container {
   display: flex;
   align-items: center;
   height: 100%;
 }
-
 /* Contact Form */
- .input-field input[type=text]:focus,
- .input-field input[type=email]:focus,
-  textarea.materialize-textarea:focus {
+.input-field input[type=text],
+.input-field input[type=email],
+textarea.materialize-textarea {
+  color: #decfbc;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+textarea.materialize-textarea:focus {
   border-bottom: 1px solid #b30000 !important;
   box-shadow: 0 1px 0 0 #b30000 !important;
 }
- .button {
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
-   border-radius: 50%;
-   width: 5rem;
-   height: 5rem;
-   color: #ffffff !important;
-   background-color: #222 !important;
-   box-shadow: 0 0 0 5px #b30000;
-   background-size: contain;
-   background-image: url("../../images/email.svg");
-  }
-  .button:hover {
-		cursor: pointer;
-		animation: bounceOut .4s linear;
-	}
-/*
-  .btn:hover {
-    cursor: pointer;
-    animation: bounceOut .4s linear;
-  }*/
+form .btn {
+  background-color: #decfbc;
+}
+form .btn:hover {
+  background-color: #b30000;
+}
 /* Sections Space Background */
 #section0{
     background: #000000 !important;
