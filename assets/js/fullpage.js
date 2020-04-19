@@ -5,6 +5,7 @@ $(document).ready(function() {
   var $second = $('#section1 .is-animated');
   var $third = $('#section2 .is-animated');
   var $fourth = $('#section3 .is-animated');
+  var $fifth = $('#footer .is-animated');
   // Fullpage.js Initialisation more info at https://github.com/alvarotrigo/fullpage.js
   $('#fullpage').fullpage({
     //Navigation
@@ -108,10 +109,12 @@ $(document).ready(function() {
           /* Section 3 Fallback */
           if (index == 4 && direction =='down') {
             $fourth.eq(2).removeClass('animated fadeIn').addClass('animated fadeOut').css('animation-delay', '.2s');
+            $fifth.eq(0).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '.2s');
           }
           /* Section 4 Fallback */
           if (index == 5 && direction =='up') {
             $fourth.eq(2).removeClass('animated fadeOut').addClass('animated fadeIn').css('animation-delay', '.2s');
+            $fifth.eq(0).removeClass('animated fadeIn').addClass('animated fadeOut').css('animation-delay', '.2s');
           }
         }
     });
