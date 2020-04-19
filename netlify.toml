@@ -1,4 +1,2 @@
 [build]
   command = "npm install"
-[build.environment]
-  NODE_VERSION = "10"
