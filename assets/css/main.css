@@ -165,27 +165,50 @@
 		transform: rotate(7deg);
 	}
 /*Responsive*/
-@media screen and (max-height: 800px) {
+@media screen and (max-width: 1600px) {
 	#section0:after {
 		height: 23rem;
 	}
 	#section1:before{
 		height: 23rem;
 	}
+	#section1:after {
+		height: 23rem;
+	}
+	#section2:before {
+		height: 22rem;
+	}
+	#section2:after {
+		height: 22rem;
+	}
+	#section3:before {
+		height: 23rem;
+	}
+	#section3:after {
+		height: 25rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	#section0:after {
+		height: 23rem;
+	}
+	#section1:before {
+		height: 23rem;
+	}
+	#section1:after {
+		height: 23rem;
+	}
 	#section2:before{
 		height: 22rem;
 	}
-	#section2:before{
+	#section2:after {
 		height: 20rem;
 	}
-	#section1:after {
-		height: 25rem;
+	#section3:before {
+		height: 22rem;
 	}
-	#section2:after{
-		height: 20rem;
-	}
-	#section3:after{
-		height: 20rem;
+	#section3:after {
+		height: 24rem;
 	}
 }
 #footer {
