@@ -1,7 +1,5 @@
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
-[build]
-  command = "npm install"
 [[redirects]]
   from = "/*"
   to = "/index.html"
