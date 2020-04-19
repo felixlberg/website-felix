@@ -198,9 +198,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/css/images/favicon-16x16.png">
   <link rel="manifest" href="assets/css/images/manifest.json">
 
-  <script type="module">
-    import Simpla from './assets/js/simpla';
-    import SimplaNetlify from './assets/js/simpla/adapters/netlify';
+  <script type="text/javascript" src="assets/js/simpla.js"></script>
+  <script type="text/javascript" src="assets/js/adapters/netlify.js"></script>
+
+  <script>
     const SIMPLA_CONFIG = {
       repo: 'felixlberg/website-felix',
       auth: new SimplaNetlify({ site: 'underground-consulting.netlify.app' }),
