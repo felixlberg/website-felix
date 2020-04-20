@@ -73,3 +73,10 @@ form .btn:hover {
     75% {box-shadow: 0 0 0 4px #8B1A1A;opacity: 1;}
     100% {box-shadow: 0 0 0 5px #b30000;opacity: 1;}
 }
+/* Simpla */
+.simpla-admin-controls-0 {
+  background-color: #b30000;
+}
+.simpla-admin-controls-0 .button.simpla-admin-controls {
+  background-color: #b30000;
+}
