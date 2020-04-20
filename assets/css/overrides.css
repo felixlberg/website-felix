@@ -80,3 +80,6 @@ form .btn:hover {
 .simpla-admin-controls-0 .button.simpla-admin-controls {
   background-color: #b30000;
 }
+.style-scope.iron-icon {
+  color: #000000;
+}
