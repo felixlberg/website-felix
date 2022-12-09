@@ -26,30 +26,33 @@
 	position: absolute;
 }
 .title:after {
-	text-shadow:  0px 0px 8px rgba(185, 185, 185, 0.9);
+	/*text-shadow:  0px 0px 4px rgba(179, 0, 0, 0.3);*/
 	color: transparent;
 }
 .shadow:after {
 	content: attr(title); /* Pulls the text from the 'title' attribute to make the shadow */
 }
-	@media screen and (max-width: 1100px) {
-		.title {font-size: 7rem; letter-spacing: 5px;}
-	}
-	@media screen and (max-width: 767px) {
-		.title {font-size: 80px; letter-spacing: 3px;}
-	}
-	@media screen and (max-width: 660px) {
-		.title {font-size: 70px;}
-	}
-	@media screen and (max-width: 560px) {
-		.title {font-size: 62px; letter-spacing: 2.5px;}
-	}
-	@media screen and (max-width: 500px) {
-		.title {font-size: 46px;letter-spacing: 2px;}
-	}
-	@media screen and (max-width: 400px) {
-		.title {font-size: 38px;}
-	}
+@media screen and (min-width: 1900px) {
+	.title {width: 90%}
+}
+@media screen and (max-width: 1100px) {
+	.title {font-size: 7rem; letter-spacing: 5px;}
+}
+@media screen and (max-width: 767px) {
+	.title {font-size: 80px; letter-spacing: 3px;}
+}
+@media screen and (max-width: 660px) {
+	.title {font-size: 70px;}
+}
+@media screen and (max-width: 560px) {
+	.title {font-size: 62px; letter-spacing: 2.5px;}
+}
+@media screen and (max-width: 500px) {
+	.title {font-size: 46px;letter-spacing: 2px;}
+}
+@media screen and (max-width: 400px) {
+	.title {font-size: 38px;}
+}
 /*Sections*/
 #section0,
 #section1,
